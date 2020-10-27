@@ -1,0 +1,26 @@
+
+.borad-title{
+    color: blue;
+}
+
+.title{
+    display: inline-block;
+
+}
+
+.title button{
+    position: relative;
+    left: -40px;
+}
+
+.btn1{
+    height: 150px;
+    width: 200px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.Column-Data{
+    display: flex;
+    flex-direction: row;
+}
