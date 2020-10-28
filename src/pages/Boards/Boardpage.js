@@ -45,7 +45,6 @@ export default class Boards extends Component {
             name: this.state.AddColumn
         })
         .then((response)=>{
-            console.log(response);
             this.setState({
                 show: false
             })

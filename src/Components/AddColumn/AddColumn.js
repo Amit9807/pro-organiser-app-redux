@@ -12,9 +12,7 @@ export default class AddColumn extends Component {
         }
     }
 
-
-    componentDidMount(){
-       
+    GetColumnData =()=>{
         Axios.get(`https://redux-pro-organizers.firebaseio.com/boardContents/${this.state.BoardId}/column.json`)
         .then((response)=>{
             console.log("Response",response.data);
@@ -25,17 +23,25 @@ export default class AddColumn extends Component {
         .catch((error)=>{
             console.log(error);
         })
-
-       
     }
+
+
+    componentDidMount(){
+      this.GetColumnData()
+    }
+
 
     render() {
         return (
             <div>
-                {
                 
+                   
+                
+                {
+                 
                 (this.state.ColumnData !== null) ?                
                 (
+                    this.GetColumnData(),
                     Object.entries(this.state.ColumnData).map((res)=>(
     
                         <AddCard class="d-flex flex-row" id={res[0]} name={res[1].name} BoardId={this.props.BoardId} members={this.props.members}  />
@@ -51,3 +57,6 @@ export default class AddColumn extends Component {
         )
     }
 }
+
+
+
