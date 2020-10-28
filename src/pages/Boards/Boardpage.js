@@ -46,7 +46,6 @@ export default class Boards extends Component {
         })
         .then((response)=>{
             console.log(response);
-            alert("Column addedd succesfully");
             this.setState({
                 show: false
             })
